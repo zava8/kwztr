@@ -3,8 +3,8 @@ const doztr = require('./doztr.js');
 // const a5_to_a8 = require('./a5_to_a8.js');
 // const a8_to_a5 = require('./a8_to_a5.js');
 // const a5_to_a54 = require('./a5_to_a54.js');
-class transliterator {
-  transliterate_dom_node(node_arg, ztr_direction_const=0) {
+class kwztr {
+  transliterate_dom_node(node_arg, ztr_direction_const="u_to_i") {
     let dikt_pair_list = [];
     let curr_dikt_pair = null;
     let curr_node_text = "";
@@ -46,7 +46,7 @@ class transliterator {
         for (let i = 0; i < ztred_span_list.length; ++i)
         {
           nekst_ztred_span = ztred_span_list[i];
-          ioz = { i: nekst_ztred_span.textContent , o: "" , z: "u_to_i" } ;
+          let ioz = { i: nekst_ztred_span.textContent , o: "" , z: ztr_direction_const } ;
           doztr(ioz);
           nekst_ztred_span.textContent = ioz.o;
           // nekst_ztred_span.textContent = u_to_a(nekst_ztred_span.textContent,false);
@@ -63,5 +63,10 @@ class transliterator {
       node.innerText = node.dataset.oldtekst;
     }
   }
+  transliterate(unicodestr,ztr_direction_const="u_to_i") {
+    let ioz = { i: nekst_ztred_span.textContent , o: "" , z: ztr_direction_const } ;
+    doztr(ioz);
+    return(ioz.o);
+  }
 }
-module.exports = transliterator
+module.exports = kwztr
