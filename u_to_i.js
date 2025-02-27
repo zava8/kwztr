@@ -1,5 +1,3 @@
-// import { usinhl2idict } from './usinhl2i_dict.js'
-// import { u2idict } from './u2i_dict.js'
 const usinhl2idict = require('./usinhl2idict.js');
 const u2idict = require('./u2idict.js');
 

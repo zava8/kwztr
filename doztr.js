@@ -19,13 +19,13 @@ const n_to_null_output = (ioz) => {
 // export const doztr = function  (ioz){
 const doztr = function  (ioz){
 		switch (ioz.z) {
-			case "e_to_i": e_to_i.e_to_i(ioz); break;
+			//case "e_to_i": e_to_i.e_to_i(ioz); break;
 			case "u_to_i":
-				//ioz.i = ioz.i.replaceAll(/ⱱ/g,'v');
+				ioz.i = ioz.i.replaceAll("ज्ञ",'gy');
 				u_to_i(ioz);
 				n_to_null_output(ioz);
 				break;
-			case "i_to_il": i_to_il(ioz); break;
+			//case "i_to_il": i_to_il(ioz); break;
 		}
 }
 module.exports = doztr
