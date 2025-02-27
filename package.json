@@ -1,6 +1,6 @@
 {
   "name": "kwztr",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "kwztr is a module to transliterate indian,srilankan,nepαl,bαńglαԃesh languages",
   "main": "kwztr.js",
   "scripts": {
