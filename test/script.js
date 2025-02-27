@@ -1,0 +1,6 @@
+const kwztr = require('kwztr')
+
+const unicode_str = 'हिन्दी विकिपीडिया' ;
+let t = new kwztr();
+let ing31str = t.transliterate(unicode_str,"u_to_i");
+console.log(ing31str)

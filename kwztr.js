@@ -64,7 +64,7 @@ class kwztr {
     }
   }
   transliterate(unicodestr,ztr_direction_const="u_to_i") {
-    let ioz = { i: nekst_ztred_span.textContent , o: "" , z: ztr_direction_const } ;
+    let ioz = { i: unicodestr , o: "" , z: ztr_direction_const } ;
     doztr(ioz);
     return(ioz.o);
   }
