@@ -1,7 +1,7 @@
 {
   "name": "kwztr",
   "version": "1.0.1",
-  "description": "kwztr is a module to transliterate indian,srilankan,nepαl,bαńglαԃesh languages",
+  "description": "kwztr is a module to transliterate indian,srilankan,nepal,bangladesh languages",
   "main": "kwztr.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

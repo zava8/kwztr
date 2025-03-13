@@ -14,8 +14,8 @@ const usinhl2idict = {
     'i', //  90A	d8A_i
     'u', // 		d8b_e 90B
     'u', // 	90C	d8c
-    'r', // 	d8d
-    'r', // 	d8e
+    'ri', // 	d8d
+    'ri', // 	d8e
     'l', // 	d8f
     'l', // 	d90
     'e', // 	d91

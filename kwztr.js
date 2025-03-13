@@ -4,7 +4,7 @@ const doztr = require('./doztr.js');
 // const a8_to_a5 = require('./a8_to_a5.js');
 // const a5_to_a54 = require('./a5_to_a54.js');
 class kwztr {
-  transliterate_dom_node(node_arg, ztr_direction_const="u_to_i") {
+  transliterate_dom_node(node_arg, a2b="u2i") {
     let dikt_pair_list = [];
     let curr_dikt_pair = null;
     let curr_node_text = "";
@@ -41,12 +41,12 @@ class kwztr {
     // const ztrdir = ref("");
     // const ioz = { i: itekst , o: otekst , z: ztrdir } ;
     // above from zava8.github.io
-    switch(ztr_direction_const) {
+    switch(a2b) {
       case "u_to_i" :
         for (let i = 0; i < ztred_span_list.length; ++i)
         {
           nekst_ztred_span = ztred_span_list[i];
-          let ioz = { i: nekst_ztred_span.textContent , o: "" , z: ztr_direction_const } ;
+          let ioz = { i: nekst_ztred_span.textContent , o: "" , z: a2b } ;
           doztr(ioz);
           nekst_ztred_span.textContent = ioz.o;
           // nekst_ztred_span.textContent = u_to_a(nekst_ztred_span.textContent,false);
@@ -63,8 +63,8 @@ class kwztr {
       node.innerText = node.dataset.oldtekst;
     }
   }
-  transliterate(unicodestr,ztr_direction_const="u_to_i") {
-    let ioz = { i: unicodestr , o: "" , z: ztr_direction_const } ;
+  transliterate(unicodestr,a2b="u2i") {
+    let ioz = { i: unicodestr , o: "" , z: a2b } ;
     doztr(ioz);
     return(ioz.o);
   }

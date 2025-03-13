@@ -1,7 +1,7 @@
 // import { i_to_il } from './i_to_il.js'
 
 // import { u_to_i } from './u_to_i.js'
-const u_to_i = require('./u_to_i.js');
+const u2i = require('./u2i.js');
 
 ////////////////
 // import * as e_to_i from './e_to_i.js'
@@ -9,20 +9,25 @@ const u_to_i = require('./u_to_i.js');
 // //  पांच (में) में, डाँगी आँगन चम्मच छाछ छछूंदर चचेरा चाचा 
 const n_to_null_output = (ioz) => {
 	ioz.i = ioz.o = ioz.o.replaceAll(
-		/([a-zԃɦńᴛ])αα/g,"$1α").replaceAll(
-		/ń$/g,"").replaceAll(
-		/ń([,\)\s\.!\?naeiouhć])/g,"$1").replaceAll(
-		/ń([bp])/g,"m$1").replaceAll(
-		/ń([^kg])/g,"n$1");
+		/([a-zԃɦńᴛ])AA/g,"$1A").replaceAll(
+		/N$/g,"").replaceAll(
+		/N\b/g,"").replaceAll(
+		/N([,\)\s\.!\?naeiouhć])/g,"$1").replaceAll(
+		/N([bp])/g,"m$1").replaceAll(
+		/N([^kg])/g,"n$1");
 }
 ///////
 // export const doztr = function  (ioz){
 const doztr = function  (ioz){
 		switch (ioz.z) {
 			//case "e_to_i": e_to_i.e_to_i(ioz); break;
-			case "u_to_i":
-				ioz.i = ioz.i.replaceAll("ज्ञ",'gy');
-				u_to_i(ioz);
+			case "u2i":
+				ioz.i = ioz.i.replaceAll(
+						/([\s\b])क्ष/g,"$1sh").replaceAll(
+						/^क्ष/g, 's').replaceAll(
+						"ज्ञ",'gy');
+				//ioz.i = ioz.i.replaceAll("ज्ञ",'gy');
+				u2i(ioz);
 				n_to_null_output(ioz);
 				break;
 			//case "i_to_il": i_to_il(ioz); break;

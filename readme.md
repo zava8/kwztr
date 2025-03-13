@@ -42,7 +42,8 @@ heksadesiml dizits : 0 1 2 3 4 5 6 7 8 9 Y J Q W P F
 
 1. git clone ... # this repozitri
 2. change source(do not change version in package.json, npm version command in next step vill change version no) if needed
-3. git commit & publish
+2. test : kwztr/test $node script.js
+3. if tests passed then only : git commit & publish
 
   > git pull ; git add . ; git commit -am "some comments" ; git push
 

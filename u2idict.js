@@ -21,7 +21,7 @@ const u2idict = {
     'A', // 	ऑ	911	2321		candra o
     'o', // 	ऒ	912	2322		short o
     'o', // 	ओ	913	2323
-    'o', // 	औ	914	2324
+    'au', // 	औ	914	2324
     'k', // 	क	915	2325
     'kh', // 	ख	916	2326
     'g', // 	ग	917	2327
@@ -54,7 +54,7 @@ const u2idict = {
     'l', // 	ल	932	2354
     'l', // 	ळ	933	2355		lla
     'l', // 	ऴ	934	2356		llla
-    'v', // 	व	935	2357
+    'w', // 	व=w	935	2357
     'sh', // 	श	936	2358
     's', // 	ष	937	2359
     's', // 	स	938	2360
@@ -77,7 +77,7 @@ const u2idict = {
     'o', // 	ॉ	949	2377		candra o
     'oe', // 	ॊ	94A	2378		short o
     'o', // 	ो	94B	2379	vvs
-    'o', // 	ौ	94C	2380	vvs
+    'au', // 	ौ	94C	2380	vvs
     '', // 	्	94D	2381	virama	VIRAMA halant suppresses inherent vowel
     '', // 	ॎ	94E	2382		prishthamatra e , combines with e to form ai, with aa to form o,and with o to form au
     'ao', // 	ॏ	94F	2383		aw

@@ -1,7 +1,7 @@
 const usinhl2idict = require('./usinhl2idict.js');
 const u2idict = require('./u2idict.js');
 
-const u_to_i = (ioz) => {
+const u2i = (ioz) => {
   function is_in_it(list, val) {
     if (!Array.isArray(list)) { list = Object.keys(list); }
     return list.indexOf(val) !== -1;
@@ -54,4 +54,4 @@ const u_to_i = (ioz) => {
     else { ioz.o += curr_char; indeks++; }
   }
 }
-module.exports = u_to_i
+module.exports = u2i
