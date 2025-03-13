@@ -2,7 +2,7 @@
 
 kwztr is a module to transliterate indian languages.
 
-1. assami
+1. assαmi
 1. bengαli/banglα
 2. oriyα/odiα
 3. тelugu
@@ -22,13 +22,13 @@ this module to be used in the webextension:
 ### source code eksecution phlo
 
 1. package.json -> main is called/run : ("main": "kwztr.js" , kwztr.js)
-2. class transliterator
-   1. transliterate(input_str,ztr_direction_const=u_to_i)
-   2. transliterate_dom_node(node_arg, ztr_direction_const=u_to_i)
+2. class kwztr
+   1. transliterate(input_str,a2b=u2i)
+   2. transliterate_dom_node(node_arg, a2b=u2i)
    3. untransliterate_dom_node()
 
 ztr_direction_const values can be :
-1. u_to_i for unicode indian/sinhalα scripts to ińglish31 : 26a-z + 5ADHTN/αԃɦтń
+1. u2i for unicode indian/sinhalα scripts to ińglish31 : 26a-z + 5ADHTN/αԃɦтń
 
 ascii510 : american standard code for information interchange
 decimal digits : 0 1 2 3 4 5 6 7 8 9
@@ -36,7 +36,8 @@ decimal digits : 0 1 2 3 4 5 6 7 8 9
 
 hscii810 : heksadesiml standard kode for informesn interchenz
 heksadesiml dizits : 0 1 2 3 4 5 6 7 8 9 Y J Q W P F
-8+8=10=vnti=4*4
+8+8=10=wnti=4*4=solɦ=ekti
+[4 finger maтhs](https://github.com/zawa4s)
 
 ### steps to clone , build , test & publish
 
@@ -45,10 +46,11 @@ heksadesiml dizits : 0 1 2 3 4 5 6 7 8 9 Y J Q W P F
 2. test : kwztr/test $node script.js
 3. if tests passed then only : git commit & publish
 
-  > git pull ; git add . ; git commit -am "some comments" ; git push
+  > git add . ; git commit -am "some comments" ; git push
 
 4. npm version patch
-5. npm publish
+5. npm login
+6. npm publish
 
 ### steps to use library
 
@@ -62,6 +64,6 @@ heksadesiml dizits : 0 1 2 3 4 5 6 7 8 9 Y J Q W P F
 import kwztr from 'kwztr';
 const unicode_str = 'हिन्दी विकिपीडिया' ;
 let t = new kwztr();
-let ing31str = t.transliterate(unicode_str,"u_to_i");
+let ing31str = t.transliterate(unicode_str,"u2i");
 
 [code_map_sheet]: https://docs.google.com/spreadsheets/d/e/2PACX-1vRYY_On0oQlYqCH8KrAuNy9nxnUKRx9dG6UvjoZjbP1ZVeXX6VcHl-sU2yg9jbAFszCcNZ5STK47_rz/pubhtml
